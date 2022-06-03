@@ -1,3 +1,9 @@
+// Media Query Breakpoints
+@mixin mobile {
+	@media (max-width: 440px) {
+		@content;
+	}
+}
 // Tokens
 :root {
 	// (c)olor
@@ -60,7 +66,7 @@
 body {
 	margin: 0;
 	color: var(--t-fg);
-	font-family: 'Inter', 'system-ui', sans-serif;
+	font-family: "Inter", "system-ui", sans-serif;
 }
 
 * {
@@ -83,7 +89,7 @@ h1 {
 // Utils
 
 // color
-$colors: 'black', 'blue', 'white';
+$colors: "black", "blue", "white";
 @each $color in $colors {
 	// text color
 	.tc-#{$color} {

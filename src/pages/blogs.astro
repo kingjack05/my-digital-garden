@@ -1,0 +1,35 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Footer from '../components/Footer/index.jsx';
+import Nav from '../components/Nav/index.jsx';
+import BlogPreview from '../components/BlogPreview/index.jsx';
+
+const blogs = (await Astro.glob('./blog/*.md'))
+	.filter(({ frontmatter }) => !!frontmatter.date)
+	.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+---
+
+<html lang="en">
+	<head>
+		<MainHead title="Articles" description="Jack's articles" />
+		<style lang="scss">
+			.grid {
+				display: grid;
+				grid-gap: 3rem;
+			}
+			.container{
+				min-height: 480px;
+			}
+		</style>
+	</head>
+	<body>
+		<Nav />
+		<div class="wrapper container">
+			<h2 class="mt4 mb4">Articles</h2>
+			<div class="grid">
+				{blogs.map((blog) => <BlogPreview blog={blog} />)}
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>
