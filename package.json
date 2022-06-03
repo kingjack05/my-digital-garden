@@ -1,25 +1,27 @@
 {
-  "name": "@example/portfolio",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
-  "devDependencies": {
-    "@astrojs/preact": "^0.1.3",
-    "@astrojs/react": "^0.1.3",
-    "@astrojs/sitemap": "^0.1.0",
-    "@astrojs/solid-js": "^0.1.3",
-    "astro": "^1.0.0-beta.38",
-    "react": "^17.0.2 || ^18.0.0",
-    "react-dom": "^17.0.2 || ^18.0.0",
-    "sass": "^1.52.1",
-    "solid-js": "^1.3.6"
-  },
-  "dependencies": {
-    "preact": "^10.7.2"
-  }
+	"name": "@example/portfolio",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "concurrently --kill-others \"npm run start\" \"npm run netlifyCMS-localProxy\"",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"netlifyCMS-localProxy": "npx netlify-cms-proxy-server"
+	},
+	"devDependencies": {
+		"@astrojs/preact": "^0.1.3",
+		"@astrojs/react": "^0.1.3",
+		"@astrojs/sitemap": "^0.1.0",
+		"@astrojs/solid-js": "^0.1.3",
+		"astro": "^1.0.0-beta.38",
+		"concurrently": "^7.2.1",
+		"react": "^17.0.2 || ^18.0.0",
+		"react-dom": "^17.0.2 || ^18.0.0",
+		"sass": "^1.52.1",
+		"solid-js": "^1.3.6"
+	},
+	"dependencies": {
+		"preact": "^10.7.2"
+	}
 }
