@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD
 title: Building My Personal Website -- Choosing The Stack
 layout: ../../layouts/blog.astro
+=======
+title: Building My Personal Website -- Constructing The Stack
+>>>>>>> 5b580847c383db0ac1bb502197b6b51c4ac5574d
 date: 2022-06-03T02:19:32.773Z
 thumbnail: https://css-tricks.com/wp-content/uploads/2021/05/astro-homepage.png
 tags:
