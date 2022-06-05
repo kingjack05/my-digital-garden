@@ -1,5 +1,5 @@
 ---
-title: Building My Personal Website -- Choosing The Stack
+title: Building My Personal Website -- Constructing The Stack
 date: 2022-06-03T02:19:32.773Z
 thumbnail: https://css-tricks.com/wp-content/uploads/2021/05/astro-homepage.png
 ---
